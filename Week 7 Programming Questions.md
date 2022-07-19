@@ -92,3 +92,65 @@ class FClass{
 	}
 }
 ```
+
+### Graded Programming Assignment 1
+```java
+import java.util.*;
+//Define DivisionException class here
+
+
+public class Test {
+ 
+    //Define divide(int a, int b) here
+    
+
+    public static void main(String[] args) {
+       Scanner sc = new Scanner(System.in);
+       int x = sc.nextInt();
+       int y = sc.nextInt();
+       
+       //call divide method here
+
+
+   }
+} 
+```
+
+### Graded Programming Assignment 2
+```java
+import java.util.*;
+//define user defined exception InvalidInputEx
+
+
+
+//define the class IntList with 
+ class IntList{
+     //instance variable of int[]
+    int[] arr = new int[5];
+    
+    //and methods set_value, getArray()
+}
+
+
+class FClass{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        IntList ilist = new IntList();
+        try {
+            for(int i = 0; i < 5; i++) {			
+                int n = sc.nextInt();
+                int m = sc.nextInt();
+                ilist.set_value(n, m);
+            }
+        }
+        catch(InvalidInputEx e) {
+            System.out.println(e.getMessage());
+            Throwable ori = e.getCause();
+            System.out.println(ori.getMessage());
+        }	
+        int[] i_arr = ilist.getArray();
+        for(int i = 0; i < i_arr.length; i++)
+            System.out.print(i_arr[i] + " ");
+    }
+}
+```
