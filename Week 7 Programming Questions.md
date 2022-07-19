@@ -57,14 +57,17 @@ public class Test4{
 ![image](https://user-images.githubusercontent.com/82328858/179658429-185cc35a-86eb-4692-bc8d-e577e30eeed1.png)
 
 >SAMPLE OUTPUT 1
+>```
 >ImproperHeadCountException: Head count should be positive non zero value
 >Destination: Elliot's Beach, Head cost: 1250.0
 >WrongDestinationException: Invalid destination
-
+>```
 
 >SAMPLE OUTPUT 2
+>```
 >ImproperHeadCountException: Head count should be positive non zero value
 >Destination: Film City, Head cost: 1142.857142857143
+>```
 
 
 ### Practice Programming Assignment 2
