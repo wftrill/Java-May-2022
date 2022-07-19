@@ -4,8 +4,7 @@
 
 
 
-```
-java
+```java
 import java.util.*;
 
 //Define class WrongDestinationException
@@ -102,8 +101,7 @@ class FClass{
 
 
 ### Graded Programming Assignment 1
-```
-java
+```java
 import java.util.*;
 //Define DivisionException class here
 
@@ -128,8 +126,7 @@ public class Test {
 ---------------------------------------------------------------------------------------------------------------------------------
 
 ### Graded Programming Assignment 2
-```
-java
+```java
 import java.util.*;
 //define user defined exception InvalidInputEx
 
