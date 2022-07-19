@@ -4,7 +4,8 @@
 
 
 
-```java
+```
+java
 import java.util.*;
 
 //Define class WrongDestinationException
@@ -55,20 +56,16 @@ public class Test4{
 ```
 ![image](https://user-images.githubusercontent.com/82328858/179658429-185cc35a-86eb-4692-bc8d-e577e30eeed1.png)
 
-###SAMPLE OUTPUT 1
+>SAMPLE OUTPUT 1
+>ImproperHeadCountException: Head count should be positive non zero value
+>Destination: Elliot's Beach, Head cost: 1250.0
+>WrongDestinationException: Invalid destination
 
-```
-ImproperHeadCountException: Head count should be positive non zero value
-Destination: Elliot's Beach, Head cost: 1250.0
-WrongDestinationException: Invalid destination
-```
 
-###SAMPLE OUTPUT 2
+>SAMPLE OUTPUT 2
+>ImproperHeadCountException: Head count should be positive non zero value
+>Destination: Film City, Head cost: 1142.857142857143
 
-```
-ImproperHeadCountException: Head count should be positive non zero value
-Destination: Film City, Head cost: 1142.857142857143
-```
 
 ### Practice Programming Assignment 2
 ```java
@@ -94,7 +91,8 @@ class FClass{
 ```
 
 ### Graded Programming Assignment 1
-```java
+```
+java
 import java.util.*;
 //Define DivisionException class here
 
@@ -117,7 +115,8 @@ public class Test {
 ```
 
 ### Graded Programming Assignment 2
-```java
+```
+java
 import java.util.*;
 //define user defined exception InvalidInputEx
 
