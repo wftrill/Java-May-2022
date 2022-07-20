@@ -140,6 +140,8 @@ class FClass{
 
 
 ### Graded Programming Assignment 2
+![image](https://user-images.githubusercontent.com/90960384/179887276-34fb243d-76b9-4c3b-9333-f7c82da5f226.png)
+![image](https://user-images.githubusercontent.com/90960384/179887330-2c9f5777-afec-4f93-a7c9-913c53187da0.png)
 ```java
 import java.util.*;
 //Define classes Items, Customer
@@ -162,3 +164,4 @@ public class Order {
   }
 }   
 ```
+![image](https://user-images.githubusercontent.com/90960384/179887406-f14ebdf5-5692-4ca1-8b09-93b21b50d366.png)
