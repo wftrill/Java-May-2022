@@ -114,10 +114,27 @@ public class SecondDose{
     }
 }
 ```
-![image](https://user-images.githubusercontent.com/90960384/179886765-5a2f42fc-ec61-41ef-b237-a05e2b989569.png)
-![image](https://user-images.githubusercontent.com/90960384/179886794-f090352f-8df2-4820-9873-d884bc6444a5.png)
-![image](https://user-images.githubusercontent.com/90960384/179886815-4e527dfb-e349-445c-989b-5c96e947e396.png)
-![image](https://user-images.githubusercontent.com/90960384/179886860-1fce3e47-bd6b-4016-87b6-907df4957c25.png)
+
+###### Sample Input 1
+    4
+    1
+    12/01/2021
+    2
+    12/03/2022
+    3
+    12/02/2022
+    4
+    12/04/2022
+###### Expected Output 1
+    The list of eligible students are: 
+    1
+    3
+###### Sample Input 2
+    1
+    5
+    12/03/2022
+###### Expected Output 2
+    There are no eligible students.
 
 
 ### Graded Programming Assignment 1
