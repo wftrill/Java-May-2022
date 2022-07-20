@@ -1,4 +1,6 @@
 ### Practice Prgramming Assignment 1
+![image](https://user-images.githubusercontent.com/90960384/179887586-0e73df33-efd5-47ae-aed9-8e4cf6e338bb.png)
+![image](https://user-images.githubusercontent.com/90960384/179887601-cda89c6f-599a-4c61-9730-08cbdfdd0593.png)
 ```java
 import java.util.*;
 //define class Address
@@ -32,6 +34,7 @@ public class FClass{
 }
 
 ```
+![image](https://user-images.githubusercontent.com/90960384/179887632-462854b3-c231-4431-9b93-b2580ea01271.png)
 
 ### Practice Programming Assignment 2
 ![image](https://user-images.githubusercontent.com/90960384/179886617-870e5bc6-fea8-466a-8fb5-36a9d6876c92.png)
