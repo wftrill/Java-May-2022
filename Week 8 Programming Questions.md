@@ -204,4 +204,24 @@ public class Order {
   }
 }   
 ```
-![image](https://user-images.githubusercontent.com/90960384/179887406-f14ebdf5-5692-4ca1-8b09-93b21b50d366.png)
+###### Sample Input 1
+    2
+    milk
+    bread
+    maggi
+###### Expected Output 1
+    naresh milk bread 
+    suresh maggi bread 
+###### Sample Input 2
+    3
+    stationery
+    maggi
+    pasta
+    noodles
+###### Expected Output 2
+    stationery
+    maggi
+    pasta
+    noodles
+    naresh stationery maggi pasta 
+    suresh noodles maggi pasta 
