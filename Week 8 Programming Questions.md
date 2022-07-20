@@ -34,7 +34,17 @@ public class FClass{
 }
 
 ```
-![image](https://user-images.githubusercontent.com/90960384/179887632-462854b3-c231-4431-9b93-b2580ea01271.png)
+
+###### Sample Input 1
+    Vinay Kota HR
+    Mumbai Finance
+###### Expected Output 1
+    Vinay : Mumbai : Finance, Vinay : Kota : HR
+###### Sample Input 2
+    Brinda Chennai Finance
+    Kolkata IT
+###### Expected Output 2
+    Brinda : Kolkata : IT, Brinda : Chennai : Finance
 
 ### Practice Programming Assignment 2
 ![image](https://user-images.githubusercontent.com/90960384/179886617-870e5bc6-fea8-466a-8fb5-36a9d6876c92.png)
