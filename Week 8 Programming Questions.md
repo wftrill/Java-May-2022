@@ -108,6 +108,7 @@ public class SecondDose{
 
 
 ### Graded Programming Assignment 1
+![image](https://user-images.githubusercontent.com/90960384/179887081-fc38a3d1-2e98-4628-a096-d78da948c358.png)
 ```java
 import java.util.*;
 import java.util.stream.*;
@@ -135,6 +136,8 @@ class FClass{
     }
 }
 ```
+![image](https://user-images.githubusercontent.com/90960384/179887137-a9ecd16d-6bfc-4280-afe5-4af65daabd88.png)
+
 
 ### Graded Programming Assignment 2
 ```java
