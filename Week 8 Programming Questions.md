@@ -166,7 +166,17 @@ class FClass{
     }
 }
 ```
-![image](https://user-images.githubusercontent.com/90960384/179887137-a9ecd16d-6bfc-4280-afe5-4af65daabd88.png)
+
+###### Sample Input 1
+    IT 30000
+###### Expected Output 1
+    Nora : IT : 50000 
+    Bella : IT : 60000 
+    Jacob : IT : 70000 
+###### Sample Input 2
+    HR 50000
+###### Expected Output 2
+    James : HR : 80000
 
 
 ### Graded Programming Assignment 2
