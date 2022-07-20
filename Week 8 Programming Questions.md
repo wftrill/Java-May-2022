@@ -1,0 +1,154 @@
+### Practice Prgramming Assignment 1
+```java
+import java.util.*;
+//define class Address
+
+//define class Department
+
+//define class Person
+
+//define class Employee
+
+
+
+public class FClass{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String n = sc.next(); //read name
+        String a1 = sc.next(); //read address
+        String d1 = sc.next(); //read department
+        String a2 = sc.next(); //read new address
+        String d2 = sc.next(); //read new department
+        try {
+            Employee e1 = new Employee(n, new Address(a1), new Department(d1));
+            Employee e2 = e1.clone(); 
+            e1.updateEmp(a2, d2);
+            System.out.println(e1 + ", " + e2);
+        }
+        catch(CloneNotSupportedException e) {
+            System.out.println("clone() not supported");
+        }
+    }
+}
+
+```
+
+### Practice Programming Assignment 2
+```java
+import java.util.stream.Stream;
+import java.util.*;
+import java.text.*;
+
+class Student{
+    private int roll_num;
+    private Date dose_one = new Date(); 
+    private Date dose_two = new Date();	
+    
+    public int getRollNo() {
+        return roll_num;
+    }	
+    public Student(int roll_num, String dd_str) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        this.roll_num = roll_num;
+        try {			
+            dose_one = sdf.parse(dd_str);		
+            dose_two = sdf.parse("30/03/2022");
+        }
+        catch(ParseException e){
+            System.out.println("Incorrect Date Format");
+        }
+    }	
+    public boolean isEligible() {
+        //Complete the method definition
+        
+    }
+}
+//Define class StudentList here.
+//Inside class StudentList, define method getEligibleList(List<Student>)
+//that uses the method isEligible() in class Student to return the 
+//stream of eligible students.
+
+//Define method isEmpty(Stream<Student>) 
+//that helps customizing output message
+public class SecondDose{
+    public static void main(String[] args) {		
+        Scanner sc = new Scanner(System.in);
+        int roll_num;		
+        String dose_one_str;
+        List<Student> full_list = new ArrayList<Student>();
+        
+        int num = sc.nextInt(); //Number of students
+        for (int i=0; i<num; i++) {
+            roll_num = sc.nextInt(); //Roll Number
+            dose_one_str = sc.next(); //Date of Dose One			
+            Student st = new Student(roll_num, dose_one_str);
+            full_list.add(st); // Add the student to an ArrayList
+        }
+        
+        StudentList list = new StudentList();		
+        Stream<Student> eligible_list = list.getEligibleList(full_list);
+        if (!list.isEmpty(eligible_list)) {
+            System.out.println("The list of eligible students are: ");
+            eligible_list = list.getEligibleList(full_list);
+            eligible_list.forEach(s -> System.out.println(s.getRollNo()));
+        }
+        else {
+            System.out.println("There are no eligible students.");
+        }
+        sc.close();
+    }
+}
+```
+
+### Graded Programming Assignment 1
+```java
+import java.util.*;
+import java.util.stream.*;
+//define class Employee
+
+
+class FClass{
+    //define method query
+
+    
+ public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        var eList = new ArrayList<Employee>();
+        eList.add(new Employee("Jack", "HR", 30000));
+        eList.add(new Employee("Aria", "HR", 40000));
+        eList.add(new Employee("Nora", "IT", 50000));
+        eList.add(new Employee("Bella", "IT", 60000));
+        eList.add(new Employee("Jacob", "IT", 70000));
+        eList.add(new Employee("James", "HR", 80000));
+        String d = sc.next();       //read department
+        double s = sc.nextInt();    //read salary
+		
+        var st = query(eList, d, s);
+        st.forEach(n -> System.out.println(n + " "));
+    }
+}
+```
+
+### Graded Programming Assignment 2
+```java
+import java.util.*;
+//Define classes Items, Customer
+
+
+public class Order {
+  public static void main(String[] args) throws CloneNotSupportedException{
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt(); // number of items
+    String[] itm = new String[n];
+    for(int i = 0; i < n; i++){
+      itm[i] = sc.next(); // list of items
+    } 
+    var c1 = new Customer("naresh", new Items(itm));
+    Customer c2 = c1.clone();   
+    c2.getItems().item[0] = sc.next();   //Update first item of c2
+    c2.setName("suresh"); //Update name of c2
+    System.out.println(c1);
+    System.out.println(c2);
+  }
+}   
+```
