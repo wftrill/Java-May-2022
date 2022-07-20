@@ -34,6 +34,8 @@ public class FClass{
 ```
 
 ### Practice Programming Assignment 2
+![image](https://user-images.githubusercontent.com/90960384/179886617-870e5bc6-fea8-466a-8fb5-36a9d6876c92.png)
+![image](https://user-images.githubusercontent.com/90960384/179886652-8f01a3fa-433b-4821-be38-62b5c23aec53.png)
 ```java
 import java.util.stream.Stream;
 import java.util.*;
@@ -99,6 +101,11 @@ public class SecondDose{
     }
 }
 ```
+![image](https://user-images.githubusercontent.com/90960384/179886765-5a2f42fc-ec61-41ef-b237-a05e2b989569.png)
+![image](https://user-images.githubusercontent.com/90960384/179886794-f090352f-8df2-4820-9873-d884bc6444a5.png)
+![image](https://user-images.githubusercontent.com/90960384/179886815-4e527dfb-e349-445c-989b-5c96e947e396.png)
+![image](https://user-images.githubusercontent.com/90960384/179886860-1fce3e47-bd6b-4016-87b6-907df4957c25.png)
+
 
 ### Graded Programming Assignment 1
 ```java
