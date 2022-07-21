@@ -97,3 +97,61 @@ public class SecondDose{
     }
 }
 ```
+# grpa 1
+```
+// The program stores a list of Employee objects, each of which has name, department and salary as instance variables.
+//A user can query the list to find the Employees who belong to a specific department and have salary greater than or equal to the input salary. Complete the program as specified.
+// Define a class Employee as follows:
+// Add the instance variables to represent name, department and salary
+// Implement the required constructor(s) and accessors.
+// Override the method toString() so that the format of the output is in accordance with those in the test cases. 
+
+// Define a function query that takes a list of employees, a department and a salary as input. 
+//returns a stream comprising the Employee objects that have the same department and have salary greater and equal to the given salary.	
+
+
+import java.util.*;
+import java.util.stream.*;
+//define class Employee
+class Employee{
+    String name;
+    String dept;
+    int sal;
+    public Employee(String n,String de,int i){
+        name=n;
+        dept=de;
+        sal=i;
+    }
+    public String toString(){
+        return name+ " : "+ dept+ " : " + sal;
+    }
+}
+
+
+// Nora : IT : 50000 
+// Bella : IT : 60000 
+// Jacob : IT : 70000 
+public class FClass{
+    //define method query
+    public static Stream<Employee> query(ArrayList<Employee> lis,String d,double s){
+        return lis.stream().filter(i->i.dept.equals(d) && i.sal>=s);
+    }
+
+    
+ public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        var eList = new ArrayList<Employee>();
+        eList.add(new Employee("Jack", "HR", 30000));
+        eList.add(new Employee("Aria", "HR", 40000));
+        eList.add(new Employee("Nora", "IT", 50000));
+        eList.add(new Employee("Bella", "IT", 60000));
+        eList.add(new Employee("Jacob", "IT", 70000));
+        eList.add(new Employee("James", "HR", 80000));
+        String d = sc.next();       //read department
+        double s = sc.nextInt();    //read salary
+		
+        var st = query(eList, d, s);
+        st.forEach(n -> System.out.println(n + " "));
+    }
+}
+```
