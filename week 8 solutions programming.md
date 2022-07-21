@@ -1,3 +1,112 @@
+# ppa 1 
+```
+// Write a program to clone an object e1 of class  Employee by implementing the interface Cloneable
+//. After cloning, update the department and the address of  e1. Complete the program as detailed below to achieve this functionality.   
+
+// Define classes Address and Department that implement the interface Cloneable, and have the following members: 
+// In both classes, add an instance variable of String type (to store the address and the department respectively) 
+// Implement the required constructor(s) and accessors. 
+// Override the method clone.
+
+// Define a class Person that implements the interface Cloneable, and has the following members:
+// Instance variables name of type String and addr of type Address	
+// Implement the required constructor(s) and accessors
+// Override the method clone
+// Define a class Employee that implements the interface Cloneable, extends the class Person, and has the following members:
+// Instance variable dept of type Department	
+// Implement the required constructor(s) and accessors.
+// Override the method clone.
+// Define a method updateEmp to update the dept and addr of an Employee object
+import java.util.*;
+//define class Address
+class Address implements Cloneable{
+    String addr;
+    public Address(String ad){
+        this.addr=ad;
+    }
+    public Address clone() throws CloneNotSupportedException{
+        Address a=(Address) super.clone();
+        return a;
+    }
+ 
+}
+
+
+//define class Department
+class Department implements Cloneable{
+    String dep;
+    public Department(String ad){
+        this.dep=ad;
+    }
+    public Department clone() throws CloneNotSupportedException{
+        Department a=(Department) super.clone();
+        return a;
+    }
+}
+
+//define class Person
+class Person implements Cloneable{
+    String name;
+    Address add;
+    public Person(String n,Address a1){
+        this.name=n;
+        this.add=a1;
+    }
+    public Person clone() throws CloneNotSupportedException{
+        Person p=(Person) super.clone();
+        p.add=add.clone();
+        return p;
+    }
+}
+
+//define class Employee
+class Employee extends Person implements Cloneable{
+
+    Department dept;
+    public Employee(String n,Address a1,Department d1){
+        super(n,a1);
+        this.dept=d1;
+    }
+    
+    public Employee clone() throws CloneNotSupportedException{
+        Employee e=(Employee) super.clone();
+        e.dept=dept.clone();
+        return e;
+    }
+    public void updateEmp(String a2,String d2){
+        this.dept=new Department(d2);
+        this.add=new Address(a2);
+    }
+    //Vinay : Mumbai : Finance, Vinay : Kota : HR
+    public String toString(){
+        return name +" : "+add.addr+" : "+ dept.dep ;
+    }
+    
+}
+
+
+
+public class FClass{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        String n = sc.next(); //read name
+        String a1 = sc.next(); //read address
+        String d1 = sc.next(); //read department
+        String a2 = sc.next(); //read new address
+        String d2 = sc.next(); //read new department
+        try {
+            Employee e1 = new Employee(n, new Address(a1), new Department(d1));
+            Employee e2 = e1.clone(); 
+            e1.updateEmp(a2, d2);
+            System.out.println(e1 + ", " + e2);
+        }
+        catch(CloneNotSupportedException e) {
+            System.out.println("clone() not supported");
+        }
+    }
+}
+```
+
 ## ppa 2
 ```
 // A school is planning for a second Covid-19 vaccination drive on 30/03/2022, for students who have already taken the first dose. 
@@ -154,4 +263,103 @@ public class FClass{
         st.forEach(n -> System.out.println(n + " "));
     }
 }
+```
+# grpa 2
+```
+// Naresh (aka Customer c1) buys a set of items from a shop. Suresh (aka Customer c2)
+// also buys all items bought by Naresh except the first item, in place of which Suresh
+// buys another item. Write a program that defines two classes Items and Customer, and
+// clones the object of class Customer to model the scenario given above. Classes Items
+// and Customer should be cloneable, and must have the functionality to clone (deep copy)
+// c2 from c1. You are given as input the number of items bought by Naresh, the names
+// of the items, and the new item that Suresh will be buying. The code to change the first
+// item and the name in the second customer object after the cloning, has been provided
+// in the given code. You should complete the program as specified below.
+
+// Define a class Items that implements interface Cloneable, and has the following
+// members.
+// – A public instance variable item of type String[] to store the item names
+// – Constructor(s) and accessors to, respectively, initialize and access the instance
+// variable
+// – Override the method clone
+// – Override the method toString so that the format of the output is in accordance
+// with those in the test cases
+
+// Define a class Customer that implements interface Cloneable, and has the following
+// members.
+// – Instance variable name of type String to store the name of the customer
+// – Instance variable of type Items to store the items purchased by the customer
+// – Implement the constructor(s), the accessor getItems() to return the object
+// of Items, and the mutator setName(String s) to update the name of the
+// customer.
+// – Override the method clone
+// – Override the method toString so that the format of the output is in accordance
+// with those in the test cases.
+
+
+// naresh milk bread 
+// suresh maggi bread 
+
+
+import java.util.*;
+//Define classes Items, Customer
+class Items implements Cloneable{
+    public String[] item;
+    public Items(String[] itm){
+        this.item=itm;
+    }
+    public Items clone() throws CloneNotSupportedException{
+         Items it=(Items) super.clone();
+         it.item=item.clone();
+         return it;
+    }
+    public String toString(){
+        String st="";
+        for(String s:item){
+            st=st+s+" ";
+        }
+        return st;
+    }
+}
+
+class Customer implements Cloneable{
+    String name;
+    Items iteam;
+    public Customer(String n,Items i){
+        name=n;
+        iteam=i;
+    }
+    public Items getItems(){
+        return iteam;
+    }
+    public Customer clone() throws CloneNotSupportedException{
+         Customer it=(Customer) super.clone();
+         it.iteam=iteam.clone();
+         return it;
+    }
+    public String toString(){
+        return name+" "+ iteam;
+    }
+    public void setName(String s){
+        name=s;
+    }
+}
+
+
+public class Order {
+  public static void main(String[] args) throws CloneNotSupportedException{
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt(); // number of items
+    String[] itm = new String[n];
+    for(int i = 0; i < n; i++){
+      itm[i] = sc.next(); // list of items
+    } 
+    var c1 = new Customer("naresh", new Items(itm));
+    Customer c2 = c1.clone();   
+    c2.getItems().item[0] = sc.next();   //Update first item of c2
+    c2.setName("suresh"); //Update name of c2
+    System.out.println(c1);
+    System.out.println(c2);
+  }
+}   
 ```
