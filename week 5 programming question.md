@@ -154,3 +154,54 @@ Expected Output
 1.3 2.3 0.25 
 90 34 45 
 ```
+
+## GRPA 1
+
+Given as input two integers n_1,n_2 and two double values d_1,d_2 complete the Java code to form two complex numbers c_1 and c_2, as described below, and print their sum.
+The real parts of c_1 and c_2 are n_1 and d_1 respectively, whereas their imaginary parts are n_2 and d_2, respectively.
+Define a generic class ComplexNum with the following members.
+Instance variables r and i
+A constructor to initialize r and i	
+A method add()to return the sum of the two instances of generic type ComplexNum
+A method that overrides the toString() method in the Object class so that the format of the output is in accordance with those in the test cases. 
+```
+
+import java.util.*;
+//Add your code for ComplexNum here
+
+
+class FClass{
+public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n1, n2;
+        double d1, d2;
+        n1 = sc.nextInt();
+        n2 = sc.nextInt();
+        d1 = sc.nextDouble();
+        d2 = sc.nextDouble();
+        ComplexNum<Integer> c1 = new ComplexNum<Integer>(n1, n2);
+        ComplexNum<Double> c2 = new ComplexNum<Double>(d1, d2);
+        ComplexNum<Double> c3 = c1.add(c2);
+        System.out.println(c1 + " + " + c2 + " = " + c3);
+    }
+}
+```
+Test Case 1
+```
+10 20
+13.3 5.12
+```
+Expected Output
+```
+10.0 + 20.0i + 13.3 + 5.12i = 23.3 + 25.12i
+```
+
+Test Case 3
+```
+10 15
+5.4 1.6
+```
+Expected Output
+```
+10.0 + 15.0i + 5.4 + 1.6i = 15.4 + 16.6i
+```
