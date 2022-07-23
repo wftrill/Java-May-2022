@@ -195,7 +195,15 @@ Expected Output
 ```
 10.0 + 20.0i + 13.3 + 5.12i = 23.3 + 25.12i
 ```
-
+Test Case 2
+```
+6 10
+10.3 15.6
+```
+Expected Output
+```
+6.0 + 10.0i + 10.3 + 15.6i = 16.3 + 25.6i
+```
 Test Case 3
 ```
 10 15
@@ -204,4 +212,92 @@ Test Case 3
 Expected Output
 ```
 10.0 + 15.0i + 5.4 + 1.6i = 15.4 + 16.6i
+```
+## GRPA 2
+
+![image](https://user-images.githubusercontent.com/82328858/180589113-2b246cc1-fd8d-41f5-aa01-513c27bb1beb.png)
+```
+import java.util.*;
+class ArrayExample <T>{
+  T[] a;
+  
+// Define constructor(s) as needed
+    
+    
+  // Define method display() that print the elements of array a 
+  
+    
+  // Define method elementCount(T x) that 
+  
+  public int elementCount(T x){
+      
+  }
+  // counts the no. of times x is present in the array a
+}
+public class ArrayObject{
+  public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
+    int len = sc.nextInt(); //Taking input for length of the array
+    Integer[] x = new Integer[len];
+    for(int i = 0; i < len; i++){
+          x[i] = sc.nextInt(); //Taking input for Integer array
+    }
+    
+    //Write the code here to create an object obj for Integer array
+    @SuppressWarnings("unchecked")
+    
+    int s1 = sc.nextInt(); //Taking input for the value to be counted
+    String[] y = new String[len];
+    for(int i = 0; i < len; i++){
+          y[i] = sc.next(); //Taking input for String array
+    }
+    
+    //Write the code here to create an object obj1 for String array
+    @SuppressWarnings("unchecked")
+    
+
+    String s2 = sc.next(); //Taking input for the value to be counted
+    obj.display();
+    System.out.println(obj.elementCount(s1));
+    obj1.display();
+    System.out.println(obj1.elementCount(s2));
+  }
+}
+```
+Test Case 1
+```
+2 
+1 
+1 
+1 
+car 
+car 
+car 
+```
+Expected Output
+```
+1 1 
+2
+car car 
+2 
+```
+
+Test Case 2
+```
+3 
+4 
+5
+6
+4 
+java 
+nest 
+play
+play
+```
+Expected Output
+```
+4 5 6 
+1
+java nest play 
+1
 ```
