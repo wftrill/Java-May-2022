@@ -61,3 +61,96 @@ class FClass{
     }
 }
 ```
+Test Case 1
+```
+java.lang.Object
+```
+Expected Output
+```
+
+Constructor: 1, 1
+Fields: 0, 0
+Methods: 9, 12
+```
+
+Test Case 2
+```
+java.lang.String
+```
+Expected Output
+```
+
+Constructor: 15, 18
+Fields: 1, 9
+Methods: 82, 90
+```
+
+## PPA 2
+
+Complete the Java code given below that takes as input a string array, where each string is assured to be either an integer or a double in string format. Your code must segregate the two types - integer and double - and print the double values followed by the integer values. For this, your code must iterate through the input array, and add each element to the appropriate array based on its type. 
+```
+
+import java.util.Scanner;
+class ConvertArrays{
+	    public Double doubleArr[]=new Double[3];
+	    public Integer intArr[]=new Integer[3];
+	    public int x=0,y=0,z=0;
+	    public void convert(String[] arr){
+        //loop through the arr and store each element 
+		//in the appropriate array
+	    }
+}
+	    public <T> void display(T[] arr){
+	        for(T elements:arr)
+	    	        System.out.print(elements+" ");
+	        System.out.println();
+	    }
+}
+public class Programming {
+	    public static void main(String[] args) {
+		    Scanner scanner=new Scanner(System.in);
+		    String arr[]= new String[6];
+		    for (int i = 0; i < arr.length; i++) {
+			        arr[i]=scanner.next();
+		    }
+	    ConvertArrays conArrays=new ConvertArrays();
+	    conArrays.convert(arr);
+	    System.out.println("===After conversion Arrays===");
+	    conArrays.display(conArrays.doubleArr);
+	    conArrays.display(conArrays.intArr);	    
+	}
+}
+```
+Test Case 1
+```
+10 
+20 
+30 
+40.45 
+50.56 
+67.0
+```
+Expected Output
+```
+
+===After conversion Arrays===
+40.45 50.56 67.0 
+10 20 30 
+```
+
+Test Case 2
+```
+1.3
+2.3
+0.25
+90
+34
+45
+```
+Expected Output
+```
+
+===After conversion Arrays===
+1.3 2.3 0.25 
+90 34 45 
+```
